@@ -1,0 +1,681 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --corFundo: #4A8864;
+    --verdePrincipal: #228664;
+    --verdePrincipalEscuro: #1F6F54;
+    --brancoComTransparencia: rgba(255, 255, 255, 0.4);
+    --cinzaClaro: #F4F4F4;
+    --cinzaClaro2: #D2D2D2;
+    --fonte: 'Poppins', sans-serif;
+}
+
+body {
+    background: var(--cinzaClaro);
+    font-family: var(--fonte);
+}
+
+strong:not(.enviarPixDev) {
+    font-weight: bold;
+    display: block;
+}
+
+.container {
+    background: var(--corFundo);
+    max-width: 800px;
+    margin: auto;
+}
+
+header {
+    padding: 20px 0;
+    box-shadow: 1px solid var(--brancoComTransparencia);
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--brancoComTransparencia);   
+}
+
+header img {
+    width: 100%;
+    max-width: 140px;
+    cursor: pointer;
+}
+
+header figure:nth-child(1){
+    border-right: 1px solid #FFF;
+    margin: 0 15px 0 30px;
+}
+
+/* MAIN */
+
+main {
+    color: #FFF;
+}
+
+main .secaoDetalhesConta{
+    max-width: 750px;
+    margin: auto;
+}
+
+main .cabecalhoUser {
+    display: flex;
+    padding: 40px 30px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #000;
+    margin-bottom: 30px;
+}
+
+main .cabecalhoUser .user {
+    display: flex;
+    align-items: center;
+}
+
+main .cabecalhoUser .user img{
+    margin-right: 15px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+main .cabecalhoUser .user p {
+    line-height: 25px;
+}
+
+main .cabecalhoUser .user p a{
+    cursor: pointer;
+    text-decoration: none;
+    color: #FFF;
+}
+
+main .cabecalhoUser .userIcon img{
+    width: fit-content;
+    height: 40px;
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+
+.movimentacoes {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 60px;
+    margin: 0 30px;
+}
+
+.movimentacoes .saldo p {
+    font-size: 18px;
+    width: 130px;
+}
+
+.movimentacoes .saldo .saldoValor{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.movimentacoes .saldo .saldoValor .valor {
+    visibility: hidden;
+}
+
+.movimentacoes .saldo .saldoValor .olho{
+    position: relative;
+}
+
+.movimentacoes .saldo .saldoValor img {
+    width: 40px;
+    height: 24px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.verSaldo {
+    position: relative;
+}
+
+.lineSaldo {
+    width: 63px;
+    height: 7px;
+    border-radius: 7px;
+    background-color: var(--cinzaClaro2);
+    position: absolute;
+    top: 50%;
+    left: 22px;
+    transform: translateY(-50%);
+}
+
+.lineOlho {
+    width: 40px;
+    height: 2px;
+    background-color: #FFF;
+    position: absolute;
+    top: 41%;
+    left: 34%;
+    transform: rotate(34deg);
+    visibility: hidden;
+}
+
+.ocultarElemento {
+    visibility: hidden;
+}
+
+.mostrarElemento {
+    visibility: visible;
+}
+
+.movimentacoes .saldo .saldoValor .mostrarElemento {
+    visibility: visible;
+}
+
+.btnExtrato {
+    background-color: #FFF;
+    border: none;
+    border-radius: 10px;
+    font: bold 18px var(--fonte);
+    padding: 10px 60px;
+    cursor: pointer;
+}
+
+.formas ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+}
+
+.formas ul li {
+    background-color: var(--verdePrincipalEscuro);
+    width: 170px;
+    height: 170px;
+    border-radius: 10px;
+    padding: 40px 20px;
+    cursor: pointer;
+}
+
+.formas ul li img {
+    width: 100%;
+    max-width: 40px;
+}
+
+.formas ul li p {
+    margin-top: 20px;
+    font: bold 18px var(--fonte);
+    line-height: 25px;
+    width: 80px;
+}
+ 
+.formas ul .destaque {
+    background-color: #FFF;
+    color: var(--verdePrincipalEscuro);
+} 
+
+/* ESCOLHA DE PAGAMENTO */
+
+.secaoTransacao {
+    background-color: #FFF;
+    border-radius: 30px 30px 0 0;
+    border-bottom: 15px solid var(--cinzaClaro2);
+    margin-top: 30px;
+    padding-top: 20px;
+    min-height: fit-content;
+}
+
+.secaoTransacao .containerTransacao div:not(.transacaoEscolha){
+    display: none;
+    position: relative;
+}
+
+.chaveCopiada {
+    color: #000;
+    display: flex;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.3);
+    background-color: var(--cinzaClaro);
+    align-items: center;
+    margin: 10px auto;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    /* bottom: 0;
+    left: 60%;
+    transform: translate(-50%, 65px); */
+}
+
+.chaveCopiada i {
+    color: #3AB54A;
+    margin-right: 10px;
+    font-size: 1.4em;
+}
+.chaveCopiada p::after {
+    content: '\01F60A';
+}
+
+.secaoTransacao .containerTransacao div.show {
+    display: block;
+    animation: esmaecer 0.3s;
+}
+
+@keyframes esmaecer {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.secaoTransacao .containerTransacao div.show2 {
+    display: flex;
+}
+
+.secaoTransacao .transacaoEscolha {
+    padding-top: 30px;
+    text-align: center;
+}
+
+.secaoTransacao .transacaoEscolha button {
+    font: 25px var(--fonte);
+    border: 1px solid var(--cinzaClaro2);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+    padding: 30px 60px;
+    border-radius: 10px;
+    display: block;
+    margin: 20px auto 0;
+    width: 90%;
+    max-width: 700px;
+}
+
+.secaoTransacao .transacaoEscolha img {
+    max-width: 700px;
+    width: 90%;
+    margin: 30px 0 50px;
+}
+
+
+/* SEÇÃO DO PIX */
+
+.transacaoPix {
+    max-width: fit-content;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.transacaoPix .blocoPix {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--cinzaClaro2);
+    border-radius: 10px;
+    width: 500px;
+    padding: 20px 15px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.transacaoPix .blocoPix:hover,
+.blocoCobrar:hover,
+.transacaoQRCode button:hover {
+    transform: scale(1.02);
+    transition: 0.3s;
+}
+
+.transacaoPix > img {
+    width: 100%;
+    max-width: 200px;
+    margin: 30px auto;
+    display: block;
+}
+
+.transacaoPix .blocoPix img {
+    width: 100%;
+    max-width: 70px;
+}
+
+.transacaoPix .blocoPix p {
+    color: #000;
+    margin: 0 30px;
+    line-height: 20px;
+}
+
+.blocoPix span {
+    display: block;
+    margin-top: 7px;
+    font-size: 12px;
+}
+
+.blocoPix span::before {
+    content: '\26A0 \FE0F';
+}
+
+.enviarPixDev {
+    font-weight: bold;
+}
+
+.enviarPixDev::after {
+    content: '\2764 \FE0F';
+}
+/* SEÇÃO DO QR CODE */
+
+.transacaoQRCode {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.transacaoQRCode img{
+    max-width: 180px;
+}
+
+.transacaoQRCode p {
+    margin-top: 20px;
+    color: #000;
+    font: bold 18px var(--fonte);
+}
+
+.transacaoQRCode button{
+    background-color: var(--corFundo);
+    border-radius: 10px;
+    padding: 15px 150px;
+    font: bold 18px var(--fonte);
+    color: #FFF;
+    margin: 50px 0 30px;
+    border: none;
+    cursor: pointer;
+}
+
+.transacaoQRCode a {
+    color: var(--verdePrincipal);
+    font-weight: bold;
+}
+
+
+/* SEÇÃO DO BOLETO */
+
+.transacaoBoleto {
+    width: 100%;
+    max-width: 500px;
+    margin: 40px auto 0px;
+    padding-bottom: 50px;
+}
+
+.transacaoBoleto img {
+    width: 100%;
+    max-width: 80px;
+}
+
+
+.transacaoBoleto h2 {
+    color: #000;
+    font: bold 20px var(--fonte);
+}
+
+.transacaoBoleto p {
+    color: #000;
+    line-height: 20px;
+    max-width: 500px;
+    font: 18px var(--fonte);
+    margin: 20px 0;
+}
+
+.transacaoBoleto input {
+    width: 100%;
+    max-width: 700px;
+    background-color: var(--cinzaClaro);
+    outline: none;
+    padding: 0 20px 0 50px;
+    font: 16px var(--fonte);
+    height: 50px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: 1px solid var(--cinzaClaro2);
+    color: #000;
+}
+
+/* SEÇÃO DO COBRAR */
+
+.transacaoCobrar {
+    width: 100%;
+    max-width: 500px;
+    margin: 40px auto 0px;
+    padding-bottom: 50px;
+}
+
+.transacaoCobrar img {
+    width: 100%;
+    max-width: 80px;
+}
+
+.transacaoCobrar h2 {
+    color: #000;
+    font: bold 20px var(--fonte);
+}
+
+.transacaoCobrar > p {
+    color: #000;
+    max-width: 500px;
+    font: 18px var(--fonte);
+    margin: 20px 0;
+}
+
+.transacaoCobrar .blocoCobrar {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--cinzaClaro2);
+    border-radius: 10px;
+    width: 500px;
+    margin: 20px 0;
+    padding: 15px 15px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+.transacaoCobrar .blocoCobrar img {
+    width: 100%;
+    max-width: 70px;
+    margin-right: 20px;
+}
+
+.transacaoCobrar .blocoCobrar p {
+    color: #000;
+    margin-left: 30px;
+    line-height: 25px;
+}
+
+.transacaoCobrar .blocoCobrar p strong{
+    font: 400 18px var(--fonte);
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #FFF;
+    max-width: 800px;
+    margin: auto;
+}
+
+footer ul {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+}
+
+footer ul li {
+    text-align: center;
+}
+
+footer ul li:nth-child(1) {
+    margin-left: 30px;
+}
+
+footer ul li:nth-child(5) {
+    margin-right: 30px;
+}
+
+
+footer ul li a {
+    text-decoration: none;
+}
+
+footer ul li a img:not(.pagar img) {
+    height: 35px;
+}
+
+
+footer ul li a p {
+    font: 16px var(--fonte);
+    margin-top: 15px;
+    color: var(--verdePrincipalEscuro);
+}
+
+.pagar{
+    transform: translateY(-30px);
+}
+
+footer ul .pagar a img{
+    max-width: 100px;
+}
+
+@media only screen and (max-width: 715px) {
+    header {
+        display: none;
+    }
+    
+    .btnExtrato {
+        font-size: 15px;
+        padding: 5px 30px;
+    }
+
+    .formas ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin: 0 10px;
+    }
+
+    .formas ul li {
+        width: 100px;
+        height: 100px;
+        padding: 0 0 0 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .formas ul li:nth-child(3) {
+        padding-top: 5px;
+    }
+
+    .formas ul li img {
+        max-width: 20px;
+    }
+
+    .formas ul li p {
+        margin-top: 10px;
+        font: bold 15px var(--fonte);
+        line-height: 20px;
+        width: 80px;
+    }
+    
+    .containerTransacao {
+        width: 90%;
+        margin: auto;
+    }
+
+    .transacaoPix .blocoPix, .transacaoCobrar .blocoCobrar {
+        width: 95%;
+        margin: 25px auto;
+    }
+
+    .transacaoPix img {
+        width: 70%;
+    }
+
+    .transacaoQRCode button {
+        padding: 15px 100px;
+    }
+
+    .transacaoQRCode button span {
+        font-size: 15px;
+    }
+
+        
+    .transacaoQRCode img{
+        max-width: 150px;
+    }
+
+    footer ul li a img:not(.pagar img){
+        height: 25px;
+    }
+    
+    footer ul li.pagar img {
+        height: 80px;
+    }
+
+    footer ul li a p {
+        font: 12px var(--fonte);
+        margin-top: 10px;
+    }
+}
+
+
+@media only screen and (max-width: 475px) {
+       
+    .formas ul li {
+        width: 80px;
+        height: 90px;
+        padding: 0;
+        align-items: center;
+    }
+
+    .formas ul li p {
+        text-align: center;
+    }
+
+    .containerTransacao {
+        width: 90%;
+        margin: auto;
+    }
+
+    .transacaoPix .blocoPix p {
+        font-size: 15px;
+    }
+    
+    .blocoPix span {
+        font-size: 10px;
+    }
+
+    .transacaoBoleto {
+        margin: 10px auto 0;
+    }
+    
+    .transacaoBoleto h2 {
+        font: bold 18px var(--fonte);
+    }
+    
+    .transacaoBoleto p {
+        font: 15px var(--fonte);
+    }
+    
+    .transacaoBoleto input {
+        font: 14px var(--fonte);
+    }
+    
+    /* SEÇÃO DO COBRAR */
+    
+    .transacaoCobrar {
+        margin: 10px auto 0;
+    }
+       
+    .transacaoCobrar h2 {
+        font: bold 18px var(--fonte);
+    }
+    
+    .transacaoCobrar > p {
+        font: 15px var(--fonte);
+    }
+    
+    .transacaoCobrar .blocoCobrar img {
+        max-width: 50px;
+        margin-right: 10px;
+    }
+    .transacaoCobrar .blocoCobrar p {
+        margin-left: 10px;
+    }
+}

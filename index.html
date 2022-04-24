@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/reset.css">
+    <link rel="stylesheet" href="/style/style.css">
+    
+    <script src="https://kit.fontawesome.com/a3f86d1427.js" crossorigin="anonymous"></script>
+
+    <title>Projeto PicPro</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <figure class="logoPicPro">
+                <img src="images/logo-picpro.png" alt="">
+            </figure>
+            <figure class="logoKenzie">
+                <img src="images/logo-kenzie.png" alt="">
+            </figure>
+        </header>
+        <main>
+            <section class="secaoDetalhesConta">
+                <div class="cabecalhoUser">
+                    <div class="user">
+                        <img src="images/usuario.png" alt="">
+                        <p>Olá, <a href="https://www.instagram.com/ivamberg_/" target="_blank"><strong>@ivamberg</strong></a></p>
+                    </div>
+                    <div class="userIcon">
+                        <img src="images/presente.png" alt="">
+                        <img src="images/chat.png" alt="">
+                    </div>
+                </div>
+                <div class="movimentacoes">
+                    <div class="saldo">
+                        <p>Saldo PicPay</p>
+                        <div class="saldoValor">
+                            <div class="verSaldo">
+                                <strong>R$ <span class="valor">175,92</span></strong>
+                                <div class="lineSaldo"></div>
+                            </div>
+
+                            <div class="olho">
+                                <img src="images/visualizar.png" alt="" class="olho">
+                        
+                                <div class="lineOlho"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btnExtrato">Extrato</button>
+                </div>
+                <div class="formas">
+                    <ul class="formasDePag">
+                        <li class="pix">
+                            <figure class="pix">
+                                <img src="images/pix.png" alt="" class="pix">
+                            </figure>
+                            <p class="pix">Pix</p>
+                        </li>
+                        <li class="qrcode">
+                            <figure class="qrcode">
+                                <img src="images/qrcode.png" alt="" class="qrcode">
+                            </figure>
+                            <p class="qrcode">QR Code</p>
+                        </li>
+                        <li class="boleto">
+                            <figure class="boleto">
+                                <img src="images/boleto.png" alt="" class="boleto">
+                            </figure>
+                            <p class="boleto">Pagar boleto</p>
+                        </li>
+                        <li class="cobrar">
+                            <figure class="cobrar">
+                                <img src="images/cobrar.png" alt="" class="cobrar">
+                            </figure>
+                            <p class="cobrar">Cobrar</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="secaoTransacao">
+                <div class="containerTransacao">
+                    <div class="transacaoEscolha">
+                        <button>Selecione a forma de pagamento</button>
+                        <img src="images/banner.png" alt="">
+                    </div>
+                    
+                    <div class="transacaoPix divMostrar">
+                        <img src="images/pix-logo.png" alt="">
+                        <div class="blocoPix divMostrar enviarPix" onclick="copiar('berg.doutor@gmail.com')">
+                            <img src="images/pix1.png" alt="">
+                            <p>Envie por CPF/CNPJ, telefone, e-mail ou chave aleatória<span> Ao clicar, irá copiar uma chave. Envie um pix para o desenvolvedor: <strong class="enviarPixDev">@ivamberg </strong></span></p>
+                        </div>
+                        <div class="chaveCopiada">
+                            <i class="fa-solid fa-circle-check"></i><p>Chave copiada! </p>
+                        </div>
+                        <div class="blocoPix divMostrar">
+                            <img src="images/pix2.png" alt="">
+                            <p>Insira um código Pix Copia e Cola para enviar um pagamento</p>
+                        </div>
+                    </div>
+                    <div class="transacaoQRCode divMostrar">
+                        <img src="images/qrcode-imagem.png" alt="">
+                        <p><strong>@ivamberg</strong></p>
+                        <button><span>Cobre um amigo</span></button>
+                        <a href="#"><strong>Compartilhar meu código</strong></a>
+                    </div>
+                    <div class="transacaoBoleto divMostrar">
+                        <img src="images/boleto-icon.png" alt="">
+                        <h2>Pagar com código de barras</h2>
+                        <p>Você pode parcelar em até 12x no cartão ou usar seu saldo em carteira para pagar à vista.</p>
+                        <input type="text" placeholder="Insira o código de barras">
+                    </div>
+                    <div class="transacaoCobrar divMostrar">
+                        <img src="images/cobrar-icon.png" alt="">
+                        <h2>Cobrar</h2>
+                        <p>Divida a conta com os amigos de forma fácil!</p>
+                        <div class="blocoCobrar divMostrar">
+                            <img src="images/picpay-icon.png" alt="">
+                            <p><strong>Amigos no PicPay</strong>
+                            Divida e acompanhe um gasto com pessoas por aqui</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <ul>
+                <li>
+                    <a href="">
+                        <img src="images/inicio.png" alt="">
+                        <p>Início</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="images/carteira-icon.png" alt="">
+                        <p>Carteira</p>
+                    </a>
+                </li>
+                <li class="pagar">
+                    <a href="">
+                        <img src="images/pagar.png" alt="">
+                        <p>Pagar</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="images/notificacao.png" alt="">
+                        <p>Notificações</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="images/bolsa.png" alt="">
+                        <p>Store</p>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+    </div>
+    <script src="/script/script.js"></script>
+</body>
+</html>
