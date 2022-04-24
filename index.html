@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style/reset.css">
-    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/style.css">
     
     <script src="https://kit.fontawesome.com/a3f86d1427.js" crossorigin="anonymous"></script>
+
+    <script src="script/script.js" defer></script>
 
     <title>Projeto PicPro</title>
 </head>
@@ -15,22 +17,22 @@
     <div class="container">
         <header>
             <figure class="logoPicPro">
-                <img src="images/logo-picpro.png" alt="">
+                <img src="images/logo-picpro.png" alt="logo do PicPro">
             </figure>
             <figure class="logoKenzie">
-                <img src="images/logo-kenzie.png" alt="">
+                <img src="images/logo-kenzie.png" alt="logo da kenzie">
             </figure>
         </header>
         <main>
             <section class="secaoDetalhesConta">
                 <div class="cabecalhoUser">
                     <div class="user">
-                        <img src="images/usuario.png" alt="">
+                        <img src="images/usuario.png" alt="imagem do ivamberg, representando o usuario">
                         <p>Olá, <a href="https://www.instagram.com/ivamberg_/" target="_blank"><strong>@ivamberg</strong></a></p>
                     </div>
                     <div class="userIcon">
-                        <img src="images/presente.png" alt="">
-                        <img src="images/chat.png" alt="">
+                        <img src="images/presente.png" alt="icone de presente">
+                        <img src="images/chat.png" alt="icone de chat - com dois balões de mensagens">
                     </div>
                 </div>
                 <div class="movimentacoes">
@@ -43,8 +45,7 @@
                             </div>
 
                             <div class="olho">
-                                <img src="images/visualizar.png" alt="" class="olho">
-                        
+                                <img src="images/visualizar.png" alt="icone de olho para representar o visualizar" class="olho">
                                 <div class="lineOlho"></div>
                             </div>
                         </div>
@@ -55,25 +56,25 @@
                     <ul class="formasDePag">
                         <li class="pix">
                             <figure class="pix">
-                                <img src="images/pix.png" alt="" class="pix">
+                                <img src="images/pix.png" alt="símbolo do pix" class="pix">
                             </figure>
                             <p class="pix">Pix</p>
                         </li>
                         <li class="qrcode">
                             <figure class="qrcode">
-                                <img src="images/qrcode.png" alt="" class="qrcode">
+                                <img src="images/qrcode.png" alt="símbolo do qrcode" class="qrcode">
                             </figure>
                             <p class="qrcode">QR Code</p>
                         </li>
                         <li class="boleto">
                             <figure class="boleto">
-                                <img src="images/boleto.png" alt="" class="boleto">
+                                <img src="images/boleto.png" alt="símbolo de um código de barras" class="boleto">
                             </figure>
                             <p class="boleto">Pagar boleto</p>
                         </li>
                         <li class="cobrar">
                             <figure class="cobrar">
-                                <img src="images/cobrar.png" alt="" class="cobrar">
+                                <img src="images/cobrar.png" alt="caixa com uma seta ao lado, representando o símbolo de cobrar" class="cobrar">
                             </figure>
                             <p class="cobrar">Cobrar</p>
                         </li>
@@ -84,41 +85,41 @@
                 <div class="containerTransacao">
                     <div class="transacaoEscolha">
                         <button>Selecione a forma de pagamento</button>
-                        <img src="images/banner.png" alt="">
+                        <img src="images/banner.png" alt="imagem com o logo do picpay">
                     </div>
                     
                     <div class="transacaoPix divMostrar">
-                        <img src="images/pix-logo.png" alt="">
+                        <img src="images/pix-logo.png" alt="logo do pix">
                         <div class="blocoPix divMostrar enviarPix" onclick="copiar('berg.doutor@gmail.com')">
-                            <img src="images/pix1.png" alt="">
+                            <img src="images/pix1.png" alt="simbolo de enivar para o pix">
                             <p>Envie por CPF/CNPJ, telefone, e-mail ou chave aleatória<span> Ao clicar, irá copiar uma chave. Envie um pix para o desenvolvedor: <strong class="enviarPixDev">@ivamberg </strong></span></p>
                         </div>
                         <div class="chaveCopiada">
                             <i class="fa-solid fa-circle-check"></i><p>Chave copiada! </p>
                         </div>
                         <div class="blocoPix divMostrar">
-                            <img src="images/pix2.png" alt="">
+                            <img src="images/pix2.png" alt="simbolo de copiar e colar para o pix">
                             <p>Insira um código Pix Copia e Cola para enviar um pagamento</p>
                         </div>
                     </div>
                     <div class="transacaoQRCode divMostrar">
-                        <img src="images/qrcode-imagem.png" alt="">
+                        <img src="images/qrcode-imagem.png" alt="imagem de qrcode">
                         <p><strong>@ivamberg</strong></p>
                         <button><span>Cobre um amigo</span></button>
                         <a href="#"><strong>Compartilhar meu código</strong></a>
                     </div>
                     <div class="transacaoBoleto divMostrar">
-                        <img src="images/boleto-icon.png" alt="">
+                        <img src="images/boleto-icon.png" alt="imagem de um papel representando o boleto">
                         <h2>Pagar com código de barras</h2>
                         <p>Você pode parcelar em até 12x no cartão ou usar seu saldo em carteira para pagar à vista.</p>
                         <input type="text" placeholder="Insira o código de barras">
                     </div>
                     <div class="transacaoCobrar divMostrar">
-                        <img src="images/cobrar-icon.png" alt="">
+                        <img src="images/cobrar-icon.png" alt="imagem de uma mão segurando uma moeda do picpay">
                         <h2>Cobrar</h2>
                         <p>Divida a conta com os amigos de forma fácil!</p>
                         <div class="blocoCobrar divMostrar">
-                            <img src="images/picpay-icon.png" alt="">
+                            <img src="images/picpay-icon.png" alt="logo quadrado do picpay">
                             <p><strong>Amigos no PicPay</strong>
                             Divida e acompanhe um gasto com pessoas por aqui</p>
                         </div>
@@ -129,38 +130,37 @@
         <footer>
             <ul>
                 <li>
-                    <a href="">
-                        <img src="images/inicio.png" alt="">
+                    <a href="#">
+                        <img src="images/inicio.png" alt="icone de casa, representando o inicio da pagina, localizado no footer">
                         <p>Início</p>
                     </a>
                 </li>
                 <li>
-                    <a href="">
-                        <img src="images/carteira-icon.png" alt="">
+                    <a href="#">
+                        <img src="images/carteira-icon.png" alt="icone de carteira representando a conta do usuario">
                         <p>Carteira</p>
                     </a>
                 </li>
                 <li class="pagar">
-                    <a href="">
-                        <img src="images/pagar.png" alt="">
+                    <a href="#">
+                        <img src="images/pagar.png" alt="icone de cifrão, representando o a parte de pagar contas">
                         <p>Pagar</p>
                     </a>
                 </li>
                 <li>
-                    <a href="">
-                        <img src="images/notificacao.png" alt="">
+                    <a href="#">
+                        <img src="images/notificacao.png" alt="icone de sino, representando as notificações">
                         <p>Notificações</p>
                     </a>
                 </li>
                 <li>
-                    <a href="">
-                        <img src="images/bolsa.png" alt="">
+                    <a href="#">
+                        <img src="images/bolsa.png" alt="icone de sacola, representando as opções de compras dentro do app">
                         <p>Store</p>
                     </a>
                 </li>
             </ul>
         </footer>
     </div>
-    <script src="/script/script.js"></script>
 </body>
 </html>
