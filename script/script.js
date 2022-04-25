@@ -1,12 +1,10 @@
 let formasDePag = document.querySelector('.formasDePag')
 
 formasDePag.addEventListener('click', function(e){
-    let x = e.target.classList
-
     let frente = document.querySelector('.transacaoEscolha')
-
     frente.style.display = 'block'
 
+    let x = e.target.classList
     if (x[0] == 'pix') {
         var i = 1
         destaque(x)
@@ -18,14 +16,12 @@ formasDePag.addEventListener('click', function(e){
         destaque(x)
         destaqueRemover(x)
         frente.style.display = 'none'
-
     }
     else if (x[0] == 'boleto') {
         var i = 3
         destaque(x)
         destaqueRemover(x)
         frente.style.display = 'none'
-
     }
     else if (x[0] == 'cobrar') {
         var i = 4
@@ -33,11 +29,10 @@ formasDePag.addEventListener('click', function(e){
         destaqueRemover(x)
         frente.style.display = 'none'
     }
-
     else if (x[0] == 'formasDePag'){
         document.querySelector('.transacaoEscolha').classList.add('show')
     }
-
+    
     removendoClasses()
     adicionandoClasses(i)
 })
@@ -45,16 +40,6 @@ formasDePag.addEventListener('click', function(e){
 function destaque(parametro){
     document.querySelector(`img.${parametro[0]}`).setAttribute('src', `images/${parametro[0]}-verde.png`)
     document.querySelector(`.${parametro[0]}`).classList.add('destaque')
-}
-
-function destaqueRemoverComplemento(x, y, z){
-    document.querySelector(`.${x}`).classList.remove('destaque')
-    document.querySelector(`.${y}`).classList.remove('destaque')
-    document.querySelector(`.${z}`).classList.remove('destaque')
-    
-    document.querySelector(`img.${x}`).setAttribute('src', `images/${x}.png`)
-    document.querySelector(`img.${y}`).setAttribute('src', `images/${y}.png`)
-    document.querySelector(`img.${z}`).setAttribute('src', `images/${z}.png`)
 }
 
 function destaqueRemover(parametro){
@@ -84,13 +69,20 @@ function destaqueRemover(parametro){
     }
 }
 
-function adicionandoClasses(i){
-    const elementoClick = document.querySelectorAll('.containerTransacao .divMostrar')
-    
-    document.querySelector('.transacaoEscolha').classList.remove('show')
+function destaqueRemoverComplemento(x, y, z){
+    document.querySelector(`.${x}`).classList.remove('destaque')
+    document.querySelector(`.${y}`).classList.remove('destaque')
+    document.querySelector(`.${z}`).classList.remove('destaque')
 
-    console.log(elementoClick)
-     
+    document.querySelector(`img.${x}`).setAttribute('src', `images/${x}.png`)
+    document.querySelector(`img.${y}`).setAttribute('src', `images/${y}.png`)
+    document.querySelector(`img.${z}`).setAttribute('src', `images/${z}.png`)
+}
+
+function adicionandoClasses(i){
+    document.querySelector('.transacaoEscolha').classList.remove('show')
+    
+    const elementoClick = document.querySelectorAll('.containerTransacao .divMostrar')
     // PIX
     if (i == 1) {
         elementoClick[0].classList.add('show')  
@@ -123,7 +115,6 @@ document.querySelector('.olho').addEventListener('click', function(){
     document.querySelector('.lineOlho').classList.toggle('mostrarElemento')
     document.querySelector('.valor').classList.toggle('mostrarElemento')
     document.querySelector('.lineSaldo').classList.toggle('ocultarElemento')
-   
 })
 
 const copiar = function (codigo) {

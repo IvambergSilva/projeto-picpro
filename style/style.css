@@ -13,11 +13,7 @@
 body {
     background: var(--cinzaClaro);
     font-family: var(--fonte);
-}
-
-strong:not(.enviarPixDev) {
-    font-weight: bold;
-    display: block;
+    background-image: linear-gradient(to right, var(--cinzaClaro), #4A886480, var(--cinzaClaro));
 }
 
 .container {
@@ -26,12 +22,15 @@ strong:not(.enviarPixDev) {
     margin: auto;
 }
 
+/* HEADER */
+
 header {
-    padding: 20px 0;
+    padding: 20px 53px;
     box-shadow: 1px solid var(--brancoComTransparencia);
     display: flex;
     align-items: center;
-    border-bottom: 1px solid var(--brancoComTransparencia);   
+    border-bottom: 1px solid var(--brancoComTransparencia);
+    justify-content: space-between;   
 }
 
 header img {
@@ -42,7 +41,10 @@ header img {
 
 header figure:nth-child(1){
     border-right: 1px solid #FFF;
-    margin: 0 15px 0 30px;
+}
+
+header figure:nth-child(2){
+    margin-right: 12px;
 }
 
 /* MAIN */
@@ -80,10 +82,19 @@ main .cabecalhoUser .user p {
     line-height: 25px;
 }
 
-main .cabecalhoUser .user p a{
+strong:not(.enviarPixDev) {
+    font-weight: bold;
+    display: block;
+}
+
+main .cabecalhoUser .user p a, main .transacaoQRCode p a{
     cursor: pointer;
     text-decoration: none;
     color: #FFF;
+}
+
+main .transacaoQRCode p a {
+    color: #000;
 }
 
 main .cabecalhoUser .userIcon img{
@@ -92,7 +103,6 @@ main .cabecalhoUser .userIcon img{
     margin-left: 40px;
     cursor: pointer;
 }
-
 
 .movimentacoes {
     display: flex;
@@ -174,6 +184,8 @@ main .cabecalhoUser .userIcon img{
     cursor: pointer;
 }
 
+/* Formas de pagamento */
+
 .formas ul {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -206,7 +218,7 @@ main .cabecalhoUser .userIcon img{
     color: var(--verdePrincipalEscuro);
 } 
 
-/* ESCOLHA DE PAGAMENTO */
+/* Escolha de pagamento */
 
 .secaoTransacao {
     background-color: #FFF;
@@ -235,9 +247,7 @@ main .cabecalhoUser .userIcon img{
     cursor: pointer;
     display: none;
     position: absolute;
-    /* bottom: 0;
-    left: 60%;
-    transform: translate(-50%, 65px); */
+    animation: esmaecer 0.3s;
 }
 
 .chaveCopiada i {
@@ -245,6 +255,7 @@ main .cabecalhoUser .userIcon img{
     margin-right: 10px;
     font-size: 1.4em;
 }
+
 .chaveCopiada p::after {
     content: '\01F60A';
 }
@@ -270,18 +281,24 @@ main .cabecalhoUser .userIcon img{
 .secaoTransacao .transacaoEscolha {
     padding-top: 30px;
     text-align: center;
+    animation: esmaecer 0.3s;
 }
 
-.secaoTransacao .transacaoEscolha button {
+.secaoTransacao .transacaoEscolha p {
     font: 25px var(--fonte);
     border: 1px solid var(--cinzaClaro2);
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
-    padding: 30px 60px;
+    padding: 30px 10px;
     border-radius: 10px;
     display: block;
     margin: 20px auto 0;
     width: 90%;
     max-width: 700px;
+    color: #000;
+}
+
+.secaoTransacao .transacaoEscolha p i {
+    margin: 0 20px;
+    color: var(--corFundo);
 }
 
 .secaoTransacao .transacaoEscolha img {
@@ -289,7 +306,6 @@ main .cabecalhoUser .userIcon img{
     width: 90%;
     margin: 30px 0 50px;
 }
-
 
 /* SEÇÃO DO PIX */
 
@@ -353,6 +369,7 @@ main .cabecalhoUser .userIcon img{
 .enviarPixDev::after {
     content: '\2764 \FE0F';
 }
+
 /* SEÇÃO DO QR CODE */
 
 .transacaoQRCode {
@@ -385,7 +402,6 @@ main .cabecalhoUser .userIcon img{
     color: var(--verdePrincipal);
     font-weight: bold;
 }
-
 
 /* SEÇÃO DO BOLETO */
 
@@ -518,7 +534,6 @@ footer ul li a img:not(.pagar img) {
     height: 35px;
 }
 
-
 footer ul li a p {
     font: 16px var(--fonte);
     margin-top: 15px;
@@ -533,11 +548,17 @@ footer ul .pagar a img{
     max-width: 100px;
 }
 
+/* Media Query */
+
 @media only screen and (max-width: 715px) {
     header {
         display: none;
     }
-    
+
+    main .cabecalhoUser .userIcon img{
+        height: 35px;
+    }
+
     .btnExtrato {
         font-size: 15px;
         padding: 5px 30px;
@@ -576,6 +597,10 @@ footer ul .pagar a img{
     .containerTransacao {
         width: 90%;
         margin: auto;
+    }     
+
+    .secaoTransacao .transacaoEscolha p i {
+       display: none;
     }
 
     .transacaoPix .blocoPix, .transacaoCobrar .blocoCobrar {
@@ -594,7 +619,6 @@ footer ul .pagar a img{
     .transacaoQRCode button span {
         font-size: 15px;
     }
-
         
     .transacaoQRCode img{
         max-width: 150px;
@@ -616,7 +640,10 @@ footer ul .pagar a img{
 
 
 @media only screen and (max-width: 475px) {
-       
+    main .cabecalhoUser .userIcon img{
+        height: 30px;
+    }
+
     .formas ul li {
         width: 80px;
         height: 90px;
@@ -656,8 +683,6 @@ footer ul .pagar a img{
     .transacaoBoleto input {
         font: 14px var(--fonte);
     }
-    
-    /* SEÇÃO DO COBRAR */
     
     .transacaoCobrar {
         margin: 10px auto 0;
